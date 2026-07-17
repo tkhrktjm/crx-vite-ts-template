@@ -1,8 +1,9 @@
-{
-  "$schema": "./node_modules/oxfmt/configuration_schema.json",
-  "printWidth": 100,
-  "sortPackageJson": false,
-  "ignorePatterns": [
+import { defineConfig } from "oxfmt";
+
+export default defineConfig({
+  printWidth: 100,
+  sortPackageJson: false,
+  ignorePatterns: [
     ".git",
     ".idea",
     ".vscode",
@@ -14,6 +15,6 @@
     "tsconfig.json",
     "tsconfig.node.json",
     "vite.config.ts",
-    "vitest.config.ts"
-  ]
-}
+    "vitest.config.ts",
+  ],
+});

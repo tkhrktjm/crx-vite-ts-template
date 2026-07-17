@@ -10,7 +10,8 @@
     "test": "pnpm vitest run",
     "coverage": "pnpm vitest run --coverage",
     "lint": "eslint .",
-    "fmt": "prettier -w ."
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

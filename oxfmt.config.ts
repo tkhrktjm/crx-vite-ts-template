@@ -9,6 +9,8 @@ export default defineConfig({
     ".vscode",
     "dist",
     "node_modules",
+    "oxfmt.config.ts",
+    "oxlint.config.ts",
     "pnpm-lock.yaml",
     "pnpm-workspace.yaml",
     "tsconfig.app.json",

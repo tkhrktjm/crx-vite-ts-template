@@ -12,7 +12,15 @@ export default defineConfig({
   env: {
     builtin: true,
   },
-  ignorePatterns: ["coverage", "dist", "docs"],
+  ignorePatterns: [
+    "coverage",
+    "dist",
+    "docs",
+    "oxfmt.config.ts",
+    "oxlint.config.ts",
+    "vite.config.ts",
+    "vitest.config.ts",
+  ],
   rules: {
     // @eslint/js.configs.recommended
     "constructor-super": "error",

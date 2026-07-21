@@ -1,21 +1,20 @@
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": [
-    "typescript",
-    "unicorn"
-  ],
-  "categories": {
-    "correctness": "off"
+import { defineConfig } from "oxlint";
+
+export default defineConfig({
+  options: {
+    typeAware: true,
+    typeCheck: true,
   },
-  "env": {
-    "builtin": true
+  plugins: ["typescript", "unicorn"],
+  categories: {
+    correctness: "off",
   },
-  "ignorePatterns": [
-    "coverage",
-    "dist",
-    "docs"
-  ],
-  "rules": {
+  env: {
+    builtin: true,
+  },
+  ignorePatterns: ["coverage", "dist", "docs"],
+  rules: {
+    // @eslint/js.configs.recommended
     "constructor-super": "error",
     "for-direction": "error",
     "getter-return": "error",
@@ -77,6 +76,7 @@
     "require-yield": "error",
     "use-isnan": "error",
     "valid-typeof": "error",
+    // typescript-eslint.configs.recommended
     "no-array-constructor": "error",
     "no-unused-expressions": "error",
     "typescript/ban-ts-comment": "error",
@@ -95,17 +95,13 @@
     "typescript/no-wrapper-object-types": "error",
     "typescript/prefer-as-const": "error",
     "typescript/prefer-namespace-keyword": "error",
-    "typescript/triple-slash-reference": "error"
+    "typescript/triple-slash-reference": "error",
   },
-  "overrides": [
+  overrides: [
+    // typescript-eslint.configs.recommended
     {
-      "files": [
-        "**/*.ts",
-        "**/*.tsx",
-        "**/*.mts",
-        "**/*.cts"
-      ],
-      "rules": {
+      files: ["**/*.ts", "**/*.tsx", "**/*.mts", "**/*.cts"],
+      rules: {
         "constructor-super": "off",
         "getter-return": "off",
         "no-class-assign": "off",
@@ -126,30 +122,28 @@
         "no-with": "off",
         "prefer-const": "error",
         "prefer-rest-params": "error",
-        "prefer-spread": "error"
-      }
+        "prefer-spread": "error",
+      },
     },
     {
-      "files": [
-        "**/*.{ts,tsx}"
-      ],
-      "rules": {
+      files: ["**/*.{ts,tsx}"],
+      rules: {
         "no-unused-vars": [
           "error",
           {
-            "varsIgnorePattern": "^_",
-            "argsIgnorePattern": "^_",
-            "caughtErrorsIgnorePattern": "^_",
-            "destructuredArrayIgnorePattern": "^_",
-            "ignoreRestSiblings": true
-          }
-        ]
+            varsIgnorePattern: "^_",
+            argsIgnorePattern: "^_",
+            caughtErrorsIgnorePattern: "^_",
+            destructuredArrayIgnorePattern: "^_",
+            ignoreRestSiblings: true,
+          },
+        ],
       },
-      "env": {
-        "browser": true,
-        "es2024": true,
-        "webextensions": true
-      }
-    }
-  ]
-}
+      env: {
+        browser: true,
+        es2024: true,
+        webextensions: true,
+      },
+    },
+  ],
+});

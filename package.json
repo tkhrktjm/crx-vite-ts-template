@@ -9,7 +9,7 @@
     "watch": "pnpm run dev --watch",
     "test": "pnpm vitest run",
     "coverage": "pnpm vitest run --coverage",
-    "lint": "eslint .",
+    "lint": "oxlint",
     "fmt": "oxfmt",
     "fmt:check": "oxfmt --check"
   },

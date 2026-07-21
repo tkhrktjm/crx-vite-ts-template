@@ -14,20 +14,15 @@
     "fmt:check": "oxfmt --check"
   },
   "devDependencies": {
-    "@eslint/js": "^10.0.1",
     "@types/chrome": "^0.2.2",
     "@types/node": "^26.1.1",
     "@vitest/coverage-istanbul": "^4.1.10",
-    "eslint": "^10.7.0",
-    "eslint-config-prettier": "^10.1.8",
     "globals": "^17.7.0",
     "happy-dom": "^20.11.1",
     "oxfmt": "^0.60.0",
     "oxlint": "^1.75.0",
     "oxlint-tsgolint": "^7.0.2001",
-    "prettier": "^3.9.5",
     "typescript": "~6.0.3",
-    "typescript-eslint": "^8.63.0",
     "vite": "^8.1.4",
     "vitest": "^4.1.10",
     "vitest-webextension-mock": "^0.0.7"

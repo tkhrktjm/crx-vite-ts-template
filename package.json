@@ -8,13 +8,15 @@
     "dev": "vite build --mode=development --minify=false --sourcemap",
     "watch": "pnpm run dev --watch",
     "test": "pnpm vitest run",
-    "coverage": "pnpm vitest run --coverage"
+    "coverage": "pnpm vitest run --coverage",
+    "fmt": "prettier -w ."
   },
   "devDependencies": {
     "@types/chrome": "^0.2.2",
     "@types/node": "^26.1.1",
     "@vitest/coverage-istanbul": "^4.1.10",
     "happy-dom": "^20.11.1",
+    "prettier": "^3.9.5",
     "typescript": "~6.0.3",
     "vite": "^8.1.4",
     "vitest": "^4.1.10",
